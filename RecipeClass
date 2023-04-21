@@ -1,0 +1,29 @@
+using System;
+namespace Proji
+{
+	public class Recipe
+	{
+		private string[] ingredients;
+		private string[] units;
+		private string[] steps;
+		private double[] quantities;
+
+		public Recipe()
+		{
+
+			ingredients = new string[0];
+			units = new string[0];
+			steps = new string[0];
+			quantities = new double[0];
+
+		}
+
+		public void RecipeDetails()
+		{
+			Console.WriteLine("Enter number of ingredients: ");
+			int numOfIngredients = int.Parse(Console.ReadLine());
+
+		}
+	}
+}
+
