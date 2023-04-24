@@ -59,6 +59,16 @@ namespace Proji
 			}
 
 		}
+		
+		public void ClearDetails()
+		{
+		
+		}
+		
+		public void Scale()
+		{
+		
+		}
 	}
 }
 
