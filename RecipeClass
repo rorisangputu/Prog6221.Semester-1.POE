@@ -48,15 +48,3 @@ namespace Proji
 
 
 
-			}
-
-			Console.WriteLine("Number of steps: ");
-			int numSteps = int.Parse(Console.ReadLine());
-
-			steps = new string[numSteps];
-
-			for (int o = 0; o < numSteps; o++)
-			{
-				Console.WriteLine($"Step {o + 1}: ");
-				steps[o] = Console.ReadLine();
-			}
