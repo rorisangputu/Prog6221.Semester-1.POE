@@ -25,6 +25,11 @@ namespace Proji
 			Console.WriteLine("Enter number of ingredients: ");
 			int numOfIngredients = int.Parse(Console.ReadLine());
 			
+			//Setting number of ingredients to array size
+			ingredients = new string[numOfIngredients];
+			quantities = new double[numOfIngredients];
+			units = new string[numOfIngredients];
+			
 			
 			//User prompt to add details like name, quantity 
 			// and units of measurement of the recipe
