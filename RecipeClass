@@ -10,18 +10,24 @@ namespace Proji
 
 		public Recipe()
 		{
-
+		//Intializing Arrays
 			ingredients = new string[0];
 			units = new string[0];
 			steps = new string[0];
 			quantities = new double[0];
 
 		}
-
+		
+		//Function takes input from user and adds to relevant arrays
 		public void RecipeDetails()
 		{
+			//Prompting user to enter the number of ingredients
 			Console.WriteLine("Enter number of ingredients: ");
 			int numOfIngredients = int.Parse(Console.ReadLine());
+			
+			
+			//User prompt to add details like name, quantity 
+			// and units of measurement of the recipe
 			
 			for (int r = 0; r < numOfIngredients; r++)
 			{
@@ -31,11 +37,16 @@ namespace Proji
 			quantities[r] = double.Parse(Console.ReadLine());
 			}
 			
+			//Prompting user to enter the number of steps
 			Console.WriteLine("Number of steps: ");
+			
+			//numSteps holds the number of steps
 			int numSteps = int.Parse(Console.ReadLine());
-
+			
+			//intializing step array with correct size
 			steps = new string[numSteps];
-
+			
+			//Prompting user to enter steps. 
 			for (int o = 0; o < numSteps; o++)
 			{
 				Console.WriteLine($"Step {o + 1}: ");
