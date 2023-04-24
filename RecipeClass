@@ -22,8 +22,41 @@ namespace Proji
 		{
 			Console.WriteLine("Enter number of ingredients: ");
 			int numOfIngredients = int.Parse(Console.ReadLine());
+			
+			for (int r = 0; r < numOfIngredients; r++)
+			{
+			Console.WriteLine("Name: ");
+			ingredients[r] =  Console.ReadLine();
+			Console.WriteLine("Quantity: ");
+			quantities[r] = double.Parse(Console.ReadLine());
+			}
+			
+			Console.WriteLine("Number of steps: ");
+			int numSteps = int.Parse(Console.ReadLine());
+
+			steps = new string[numSteps];
+
+			for (int o = 0; o < numSteps; o++)
+			{
+				Console.WriteLine($"Step {o + 1}: ");
+				steps[o] = Console.ReadLine();
+			}
 
 		}
 	}
 }
 
+
+
+			}
+
+			Console.WriteLine("Number of steps: ");
+			int numSteps = int.Parse(Console.ReadLine());
+
+			steps = new string[numSteps];
+
+			for (int o = 0; o < numSteps; o++)
+			{
+				Console.WriteLine($"Step {o + 1}: ");
+				steps[o] = Console.ReadLine();
+			}
