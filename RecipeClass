@@ -2,12 +2,14 @@ using System;
 namespace Proji
 {
 	public class Recipe
-	{
+	{	
+	//declaring array and recipe name variables
 		private string[] ingredients;
 		private string[] units;
 		private string[] steps;
 		private double[] quantities;
-		recipeName = null;
+		private string recipeName;
+		
 
 		public Recipe()
 		{
@@ -16,6 +18,7 @@ namespace Proji
 			units = new string[0];
 			steps = new string[0];
 			quantities = new double[0];
+			recipeName = null;
 
 		}
 		
