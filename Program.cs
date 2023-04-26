@@ -29,7 +29,9 @@ class Program
                 break;
 
             case 3:
-                recipe.Scale();
+                Console.Write("Enter Scale Factor (0.5, 2, 3): ");
+                double factor = double.Parse(Console.ReadLine());
+                recipe.Scale(factor);
                 break;
 
             case 4:
@@ -41,7 +43,7 @@ class Program
                 break;
 
             case 0:
-                    
+                    Console.WriteLine("Bye");
                 return;
 
             default:
