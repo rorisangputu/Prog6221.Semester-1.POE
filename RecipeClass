@@ -7,6 +7,7 @@ namespace Proji
 		private string[] units;
 		private string[] steps;
 		private double[] quantities;
+		recipeName = null;
 
 		public Recipe()
 		{
