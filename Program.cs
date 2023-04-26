@@ -23,6 +23,30 @@ class Program
             case 1:
                 recipe.RecipeDetails();
                 break;
+                
+             case 2:
+                recipe.Display();
+                break;
+
+            case 3:
+                recipe.Scale();
+                break;
+
+            case 4:
+                recipe.resetScale();
+                break;
+
+            case 5:
+                recipe.ClearDetails;
+                break;
+
+            case 0:
+                    
+                return;
+
+            default:
+                Console.WriteLine("Invalid input. Choose numbers from menu.");
+                break; 
         }
     }
 }
