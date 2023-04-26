@@ -23,8 +23,14 @@ namespace Proji
 		}
 		
 		//Function takes input from user and adds to relevant arrays
+		
 		public void RecipeDetails()
 		{
+		
+		//Takes Recipe Name
+			Console.WriteLine("Recipe Name: ");
+			recipeName = Console.ReadLine();
+		
 			//Prompting user to enter the number of ingredients
 			Console.WriteLine("Enter number of ingredients: ");
 			int numOfIngredients = int.Parse(Console.ReadLine());
@@ -44,6 +50,9 @@ namespace Proji
 			ingredients[r] =  Console.ReadLine();
 			Console.WriteLine("Quantity: ");
 			quantities[r] = double.Parse(Console.ReadLine());
+			
+			Console.WriteLine("Units: ");
+			units[r] = Console.ReadLine();
 			}
 			
 			//Prompting user to enter the number of steps
