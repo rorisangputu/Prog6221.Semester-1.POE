@@ -1,61 +1,80 @@
-namespace Proji;
+﻿using System.Collections.Generic;
+namespace recipeApp_Part_2;
 class Program
 {
+    
+
+    
+
+    
+
     static void Main(string[] args)
     {
-
-        Recipe recipe = new Recipe();
-        while (true)
+        recipeBook RecipeBook = new recipeBook();
+        var input = "";
+        do
         {
-            Console.WriteLine();
-            Console.WriteLine("****************************");
-            Console.WriteLine("My Cook Book Application");
-            Console.WriteLine("****************************");
-            Console.WriteLine("1. Add Recipe.");
-            Console.WriteLine("2. Display Recipe.");
+            Console.WriteLine("----------------------");
+            Console.WriteLine("REICPE APP");
+            Console.WriteLine("----------------------");
+            Console.WriteLine("Select Option");
+            Console.WriteLine("----");
+            Console.WriteLine("1. Add New Recipe");
+
+            Console.WriteLine("2. Display Recipes");
+            //Must display recipe names & recipe by name
+
             Console.WriteLine("3. Scale Recipe");
-            Console.WriteLine("4. Reset Quantities");
-            Console.WriteLine("5. Clear Recipe");
-            Console.WriteLine("0. Exit program");
-            Console.WriteLine();
-            int option = int.Parse(Console.ReadLine());
-            Console.WriteLine("****************************");
-            switch (option)
+            //Must be able to scale a specific recipe
+
+            Console.WriteLine("4. Reset quantities");
+            Console.WriteLine("5. Clear all data");
+            Console.WriteLine("Press 'X' to exit program");
+             input = Console.ReadLine();
+
+            switch (input)
             {
-                case 1:
-                    recipe.RecipeDetails();
+                case "1":
+                    RecipeBook.createRecipe();
                     break;
 
-                case 2:
-                    recipe.Display();
+                case "2":
+                    RecipeBook.displayAllRecipes();
+
+                    Console.WriteLine("View a RECIPE (y or n): ");
+                    string view = Console.ReadLine();
+                    if (view == "y")
+                    {
+                        Console.WriteLine("Recipe Name");
+                        string searchedRecipeName = Console.ReadLine();
+                        RecipeBook.displayRecipe(searchedRecipeName);
+
+                    }
                     break;
 
-                case 3:
-                    Console.Write("Enter Scale Factor (0.5, 2, 3): ");
-                    double factor = double.Parse(Console.ReadLine());
-                    recipe.Scale(factor);
+                case "3":
+                    RecipeBook.scaleIngredients();
                     break;
 
-                case 4:
-                    recipe.resetScale();
+                case "4":
+                    RecipeBook.revertScale();
                     break;
 
-                case 5:
-                    recipe.ClearDetails();
+                case "5":
+                    RecipeBook.clearRecipeList();
                     break;
 
-                case 0:
-                    Console.WriteLine("Bye");
+                case "x":
                     return;
+                    break;
 
                 default:
-                    Console.WriteLine("Invalid input. Choose numbers from menu.");
+                    Console.WriteLine("Enter a valid operation.");
                     break;
             }
-        }
+        } while (input != "X");
 
-       
+        
     }
 }
-
 
