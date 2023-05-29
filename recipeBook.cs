@@ -90,7 +90,7 @@ namespace recipeApp_Part_2
             //Prompts user to enter a Recipe Name into name variable
 			Console.WriteLine("Recipe Name: ");
 			string name = Console.ReadLine();
-
+	 Console.WriteLine("--------------");
             //Creating an instance of the recipe Class
             // naming it Recipe and intializing it with a name
 			recipe Recipe = new recipe(name);
@@ -100,7 +100,7 @@ namespace recipeApp_Part_2
             //Number of ingredients is stored in ingredient counter
             //Which will be the control of the loop 
 			int ingredientCount = int.Parse(Console.ReadLine());
-
+		 Console.WriteLine("--------------");
             //Each iteration of the loop prompts user to enter details of the ingredient
            
             for (int i = 0; i < ingredientCount; i++)
@@ -112,17 +112,19 @@ namespace recipeApp_Part_2
 
                 Console.Write("Name: ");
                 Ingredient.Name = Console.ReadLine();
-
-                Console.Write("Quantity: ");
+		Console.WriteLine("----");
+                
+		Console.Write("Quantity: ");
                 Ingredient.Quantity = double.Parse(Console.ReadLine());
-
-                Console.Write("Unit of Measurement: ");
+		Console.WriteLine("----");
+                
+		Console.Write("Unit of Measurement: ");
                 Ingredient.UnitOfMeasurement = Console.ReadLine();
-
+		 Console.WriteLine("----");
                 Console.Write("Calories: ");
                 Ingredient.Calories = int.Parse(Console.ReadLine());
-
-                Console.Write("Food Group (pick a number): ");
+		 Console.WriteLine("----");
+                Console.WriteLine("Food Group (pick a number): ");
                 Console.WriteLine("1. Grains\n" +
                     "2. Vegetable\n" +
                     "3. Meat/Poultry/Fish/Eggs\n" +
@@ -153,11 +155,11 @@ namespace recipeApp_Part_2
 
                 Recipe.Ingredients.Add(Ingredient);
             }
-
-            Console.WriteLine("Enter the steps to make the recipe (enter 'done' to finish):");
+		Console.WriteLine("----");
+            Console.WriteLine("Enter the steps to make the recipe (enter 'x' to finish):");
 
             string step = Console.ReadLine();
-            while (step != "done")
+            while (step != "x")
             {
                 Recipe.Steps.Add(step);
                 step = Console.ReadLine();
