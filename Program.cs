@@ -29,8 +29,11 @@ class Program
 
             Console.WriteLine("4. Reset quantities");
             Console.WriteLine("5. Clear all data");
+            Console.WriteLine("----");
+            input = Console.ReadLine();
+             Console.WriteLine("----");
             Console.WriteLine("Press 'X' to exit program");
-             input = Console.ReadLine();
+             
 
             switch (input)
             {
