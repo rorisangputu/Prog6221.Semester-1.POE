@@ -38,6 +38,7 @@ class Program
             switch (input)
             {
                 case "1":
+                     Console.WriteLine("---------------------");
                     RecipeBook.createRecipe();
                     break;
 
